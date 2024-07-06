@@ -1,0 +1,196 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+:root{
+    --text-color: #fff;
+    --main-color: #f55151;
+    --h1-font: 5rem;
+    --p-font: 1rem;
+}
+.bangers-regular {
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+body{
+    color: var(--text-color);
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    background:transparent;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 9%;
+    transition: all .55s ease;
+}
+
+.Logo{
+    color: var(--text-color);
+    font-size: 35px;
+    font-weight: 600;
+}.navbar{
+    display: flex;
+
+}
+.navbar a{
+    display: inline-block;
+    margin: 0 30px;
+    color: var(--text-color);
+    font-size: var(--p-font);
+    transition: all .6s;
+}
+.navbar a:hover{
+    transform: translateY(-5px);
+    color: ghostwhite;
+}
+.navbutt{
+    display: inline-block;
+    background-color: bisque;
+    border-radius: 16px;
+    color: black;
+    padding: 12px 30px;
+    font-size: var(--p-font);
+    font-weight: 500;
+    margin-right: 20px;
+    transition: .5s;
+}
+
+.navbutt:hover{
+    transform: scale(0.95);
+    border: 1px solid black;
+    background: none;
+}
+#menu-icon{
+    cursor: pointer;
+    z-index: 10001;
+    font-size: 30px;
+    display: none;
+    
+}
+.main{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(102.2deg, #fa2d42 9.6%, #f56868 96.1%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+section{
+    padding: 0 15%;
+    overflow: hidden;
+}
+.hero-txt span{
+    color:bisque;
+    font-size: 22px;
+    letter-spacing: 5px;
+    opacity: 50%;
+}
+.hero-txt h5{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    margin: 15px 0;   
+}
+.hero-txt h1{
+    font-family: "Bangers", system-ui;
+    font-size: var(--h1-font);
+    line-height: 1;
+    margin: 0 0 35px;
+
+}
+.hero-txt p{
+    width: 100%;
+    max-width: 500px;
+    font-size: var(--p-font);
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+.hero-txt a{
+    display: inline-block;
+    background-color: bisque;
+    border-radius: 16px;
+    padding: 12px 28px;
+    color: #101010;
+    font-size: 15px;
+    line-height: 1.3;
+    transition: .5s;
+}
+.hero-txt a:hover{
+    transform: scale(0.95);
+    border: 1px solid black;
+    background: none;
+}
+.img-container img{
+    scale: 50%;
+}
+.slider-frame{
+    overflow: hidden;
+    height: 800px;
+    width: 900px;
+    margin-left: 300px;
+    margin-top: 20px;
+}
+
+@keyframes slide_animation{
+    0% {left:0px;}
+    10% {left:0px;}
+    20% {left:1200px;}
+    30% {left:1200px;}
+    40% {left: 2400px;}
+    50% {left: 2400px;}
+    60% {left: 1200px;}
+    70% {left: 1200px;}
+    80% {left: 0px;}
+    90% {left: 0px;}
+    100% {left:0px;}
+}
+
+@-webkit-keyframes slide_animation{
+    0% {left:0px;}
+    10% {left:0px;}
+    20% {left:1200px;}
+    30% {left:1200px;}
+    40% {left: 2400px;}
+    50% {left: 2400px;}
+    60% {left: 1200px;}
+    70% {left: 1200px;}
+    80% {left: 0px;}
+    90% {left: 0px;}
+    100% {left:0px;}
+}
+
+.slide-images{
+    width: 3600px;
+    height: 800px;
+    margin: 0 0 0 -2400px;
+    position: relative;
+    -webkit-animation-name: slide_animation;
+    animation-name: slide_animation;
+    -webkit-animation-duration: 15s;
+    animation-duration: 15s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+}
+
+.img-container{
+    height: 800px;
+    width: 1200px;
+    position: relative;
+    float: left;
+}
